@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manish Parmar — Intern Software Engineer & AI Builder</title>
+  <meta name="description" content="Manish Parmar – Intern Software Engineer specialized in LLMs, LangChain, RAG & AI systems. Building production-grade AI for the future." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <a href="#home" class="logo-link">Manish<sup>®</sup></a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://github.com/manish-git8" target="_blank" class="nav-social-link">GITHUB</a>
+        <a href="https://www.linkedin.com/in/manish-parmar-8a30b33a6/" target="_blank" class="nav-social-link">LINKEDIN</a>
+        <a href="mailto:manish.prm86@gmail.com" class="nav-social-link">EMAIL</a>
+      </div>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
+    </div>
+  </nav>
+
+  <!-- ============ FULL-SCREEN MENU OVERLAY ============ -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-overlay-inner">
+      <nav class="menu-overlay-nav">
+        <a href="#home" class="menu-item" data-index="01">
+          <span class="menu-item-label">Home</span>
+          <span class="menu-item-arrow">→</span>
+        </a>
+        <hr class="menu-hr" />
+        <a href="#about" class="menu-item" data-index="02">
+          <span class="menu-item-label">About</span>
+          <span class="menu-item-arrow">→</span>
+        </a>
+        <hr class="menu-hr" />
+        <a href="#skills" class="menu-item" data-index="03">
+          <span class="menu-item-label">Skills</span>
+          <span class="menu-item-arrow">→</span>
+        </a>
+        <hr class="menu-hr" />
+        <a href="#projects" class="menu-item" data-index="04">
+          <span class="menu-item-label">Projects</span>
+          <span class="menu-item-arrow">→</span>
+        </a>
+        <hr class="menu-hr" />
+        <a href="#contact" class="menu-item" data-index="05">
+          <span class="menu-item-label">Contact</span>
+          <span class="menu-item-arrow">→</span>
+        </a>
+      </nav>
+      <div class="menu-footer">
+        <a href="https://github.com/manish-git8" target="_blank" class="menu-social">GitHub</a>
+        <a href="https://www.linkedin.com/in/manish-parmar-8a30b33a6/" target="_blank" class="menu-social">LinkedIn</a>
+        <a href="mailto:manish.prm86@gmail.com" class="menu-social">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-top-label">
+      <span class="dot"></span>
+      <span class="label-text">AI ENGINEER &amp; BUILDER</span>
+      <span class="label-status">(MP® — 01)</span>
+    </div>
+
+    <!-- Giant scrolling name -->
+    <div class="hero-giant-text">
+      <div class="hero-marquee-track" id="heroMarquee">
+        <span>MANISH&nbsp;&nbsp;&nbsp;</span>
+        <span>MANISH&nbsp;&nbsp;&nbsp;</span>
+        <span>MANISH&nbsp;&nbsp;&nbsp;</span>
+        <span>MANISH&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tagline">
+        <p>Building production-grade AI systems.</p>
+        <p>Specialized in LLMs, RAG &amp; LangChain.</p>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="#projects" class="hero-cta-link">
+          View My Work
+          <span class="cta-arrow">→</span>
+        </a>
+        <hr class="hero-hr" />
+      </div>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for new opportunities</span>
+      </div>
+
+    <!-- Floating AI Terminal moved inside flow -->
+      <div class="hero-terminal" id="heroTerminal">
+        <div class="terminal-header">
+          <div class="term-dot close"></div>
+          <div class="term-dot min"></div>
+          <div class="term-dot max"></div>
+          <div class="term-title">ai_agent.py</div>
+        </div>
+        <div class="terminal-body" id="termBody"></div>
+      </div>
+    </div> <!-- end hero-content -->
+
+    <!-- Chat bubbles -->
+    <div class="hero-profile-card" id="heroProfileCard">
+      <div class="profile-card-bubbles">
+        <div class="bubble" style="--delay:0.2s">Hi, I'm Manish 👋</div>
+        <div class="bubble" style="--delay:0.9s">Intern Software Engineer &amp; AI builder</div>
+        <div class="bubble" style="--delay:1.6s">I specialize in LLMs, RAG &amp; LangChain</div>
+        <div class="bubble" style="--delay:2.3s">Let's build something great together →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HERO STATS ============ -->
+  <section class="hero-stats">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-number" data-target="1000000">0</div>
+        <div class="stat-label">Tokens Processed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="99">0</div><span class="stat-suffix">%</span>
+        <div class="stat-label">Prompt Accuracy</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="5">0</div><span class="stat-suffix">+</span>
+        <div class="stat-label">AI Agents Built</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="150">0</div><span class="stat-suffix">ms</span>
+        <div class="stat-label">Avg. Retrieval Speed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE STRIP ============ -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>Python ✦ LangChain ✦ FastAPI ✦ LLM ✦ RAG ✦ Docker ✦ OpenAI ✦ FAISS ✦ HuggingFace ✦ AI/ML ✦ LangGraph ✦ GPT-4 ✦&nbsp;</span>
+      <span>Python ✦ LangChain ✦ FastAPI ✦ LLM ✦ RAG ✦ Docker ✦ OpenAI ✦ FAISS ✦ HuggingFace ✦ AI/ML ✦ LangGraph ✦ GPT-4 ✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="section-label light">
+      <span class="dot"></span>
+      <span class="label-text">ABOUT ME</span>
+      <span class="label-status">(MP® — 02)</span>
+    </div>
+
+    <div class="about-hero-row">
+      <div class="about-photo-col">
+        <div class="about-photo-frame">
+          <img src="profile.jpg" alt="Manish Parmar" class="about-photo" />
+          <div class="about-photo-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+        </div>
+      </div>
+      <div class="about-text-col">
+        <div class="about-statement reveal-text">
+          I'm an Intern Software Engineer specialized in building production-grade AI systems, focusing on Large Language Models, LangChain, and RAG techniques.
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-hr" />
+
+    <div class="about-grid">
+      <div class="about-col">
+        <h3 class="about-col-title">Fully Loaded</h3>
+        <p class="about-col-body">From complex AI systems to production-grade APIs to semantic search engines — every project is now possible with the power of LLMs.</p>
+      </div>
+      <div class="about-col">
+        <h3 class="about-col-title">Fast Delivery</h3>
+        <p class="about-col-body">Rapid prototyping and shipping. I don't wait for perfect — I iterate fast and build systems that scale from day one.</p>
+      </div>
+      <div class="about-col">
+        <h3 class="about-col-title">Open Source</h3>
+        <p class="about-col-body">Everything built on proven open-source foundations. Transparency, reproducibility, and community-first engineering.</p>
+      </div>
+    </div>
+
+    <hr class="section-hr" />
+
+    <div class="tech-tags">
+      <span class="tag">Python</span>
+      <span class="tag">LangChain</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">LLM</span>
+      <span class="tag">RAG</span>
+      <span class="tag">Docker</span>
+      <span class="tag">AI/ML</span>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section class="skills" id="skills">
+    <div class="section-label">
+      <span class="dot"></span>
+      <span class="label-text">SKILLS</span>
+      <span class="label-status">(MP® — 03)</span>
+    </div>
+
+    <div class="skills-giant reveal-text-dark">SKILLS</div>
+
+    <div class="projects-grid">
+
+      <div class="project-card" style="--gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" alt="AI & ML" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">01</div>
+            <div class="project-tags">
+              <span>OpenAI</span><span>LangChain</span><span>HuggingFace</span>
+            </div>
+          </div>
+          <h3 class="project-title">AI &amp; ML</h3>
+          <p class="project-desc">Specialized in Large Language Models, prompt engineering, and building robust AI pipelines with modern frameworks.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)"></div>
+      </div>
+
+      <div class="project-card" style="--gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop" alt="Foundations" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">02</div>
+            <div class="project-tags">
+              <span>Python</span><span>FastAPI</span>
+            </div>
+          </div>
+          <h3 class="project-title">Foundations</h3>
+          <p class="project-desc">Strong backend engineering principles, crafting high-performance APIs and scalable architectures.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%)"></div>
+      </div>
+
+      <div class="project-card" style="--gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop" alt="Vector DBs" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">03</div>
+            <div class="project-tags">
+              <span>FAISS</span><span>Vector DB</span>
+            </div>
+          </div>
+          <h3 class="project-title">Vector DBs</h3>
+          <p class="project-desc">Expertise in high-dimensional data storage and semantic search using vector databases for rapid information retrieval.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"></div>
+      </div>
+
+      <div class="project-card" style="--gradient: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" alt="AI Engineering" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">04</div>
+            <div class="project-tags">
+              <span>RAG</span><span>Agents</span>
+            </div>
+          </div>
+          <h3 class="project-title">AI Engineering</h3>
+          <p class="project-desc">Building advanced Retrieval-Augmented Generation workflows and autonomous multi-agent systems.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"></div>
+      </div>
+
+      <div class="project-card" style="--gradient: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop" alt="DevOps" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">05</div>
+            <div class="project-tags">
+              <span>Docker</span><span>Git</span>
+            </div>
+          </div>
+          <h3 class="project-title">DevOps</h3>
+          <p class="project-desc">Containerizing applications and implementing CI/CD pipelines to ensure seamless global deployments.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section class="projects" id="projects">
+    <div class="section-label">
+      <span class="dot"></span>
+      <span class="label-text">PROJECTS</span>
+      <span class="label-status">(MP® — 04)</span>
+      <a href="https://github.com/manish-git8" target="_blank" class="section-link">See all work →</a>
+    </div>
+
+    <div class="projects-giant reveal-text">PROJECTS</div>
+
+    <div class="projects-grid">
+
+      <a href="https://github.com/manish-git8" target="_blank" class="project-card" data-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop" style="--gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop" alt="Gemini-Like GenAI System" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">01</div>
+            <div class="project-tags">
+              <span>Python</span><span>LangChain</span><span>OpenAI</span><span>RAG</span><span>FAISS</span>
+            </div>
+          </div>
+          <h3 class="project-title">Gemini-Like GenAI System</h3>
+          <p class="project-desc">Engineered a high-precision Generative AI analyst for interpreting complex FSSAI food safety regulations. Multi-stage RAG pipeline with OpenAI embeddings and FAISS for sub-second retrieval.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)"></div>
+      </a>
+
+      <a href="https://github.com/manish-git8" target="_blank" class="project-card" data-image="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop" style="--gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop" alt="Agent-Based AI Assistant" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">02</div>
+            <div class="project-tags">
+              <span>LangChain</span><span>GPT-4</span><span>LangGraph</span><span>Agents</span>
+            </div>
+          </div>
+          <h3 class="project-title">Agent-Based AI Assistant</h3>
+          <p class="project-desc">Multi-agent orchestration framework for automated technical research. ReAct reasoning loops and memory management for complex, multi-step investigations.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%)"></div>
+      </a>
+
+      <a href="https://github.com/manish-git8" target="_blank" class="project-card" data-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" style="--gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" alt="Modern Portfolio Website" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">03</div>
+            <div class="project-tags">
+              <span>Python</span><span>FastAPI</span><span>Docker</span><span>SSE</span>
+            </div>
+          </div>
+          <h3 class="project-title">Modern Portfolio Website</h3>
+          <p class="project-desc">Production-grade FastAPI backend for scaling LLM applications. Async streaming SSE, token tracking, containerized with Docker for high-availability.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"></div>
+      </a>
+
+      <a href="https://github.com/manish-git8" target="_blank" class="project-card" data-image="https://images.unsplash.com/photo-1607799279861-4dddf847a9ff?q=80&w=1000&auto=format&fit=crop" style="--gradient: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)">
+        <div class="project-card-inner">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1607799279861-4dddf847a9ff?q=80&w=1000&auto=format&fit=crop" alt="AI-Powered Code Assistant" />
+          </div>
+          <div class="project-meta">
+            <div class="project-number">04</div>
+            <div class="project-tags">
+              <span>FAISS</span><span>Embeddings</span><span>Semantic Search</span>
+            </div>
+          </div>
+          <h3 class="project-title">AI-Powered Code Assistant</h3>
+          <p class="project-desc">Advanced semantic knowledge engine with hybrid search for high-dimensional data. Custom ingestion pipeline transforming unstructured text into optimized vector embeddings.</p>
+          <div class="project-arrow">→</div>
+        </div>
+        <div class="project-hover-bg" style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ SECOND MARQUEE ============ -->
+  <div class="marquee-strip dark">
+    <div class="marquee-track reverse" id="marqueeTrack2">
+      <span>GenAI ✦ LangChain ✦ Retrieval-Augmented Generation ✦ Multi-Agent Systems ✦ Semantic Search ✦ FastAPI ✦ LLM Streaming ✦ Vector Databases ✦&nbsp;</span>
+      <span>GenAI ✦ LangChain ✦ Retrieval-Augmented Generation ✦ Multi-Agent Systems ✦ Semantic Search ✦ FastAPI ✦ LLM Streaming ✦ Vector Databases ✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT SECTION (dark) ============ -->
+  <section class="contact" id="contact">
+    <div class="section-label light">
+      <span class="dot"></span>
+      <span class="label-text">GET IN TOUCH</span>
+      <span class="label-status">(MP® — 05)</span>
+    </div>
+
+    <div class="contact-giant reveal-text-dark">LET'S<br/>TALK.</div>
+
+    <hr class="section-hr light" />
+
+    <div class="contact-layout">
+      <div class="contact-info-col">
+        <p class="contact-sub">Have a project in mind?<br/>Let's build something great together.</p>
+        <div class="contact-links">
+          <a href="mailto:manish.prm86@gmail.com" class="contact-link">
+            manish.prm86@gmail.com
+            <span>→</span>
+          </a>
+          <hr class="contact-hr" />
+          <a href="https://github.com/manish-git8" target="_blank" class="contact-link">
+            GitHub
+            <span>→</span>
+          </a>
+          <hr class="contact-hr" />
+          <a href="https://www.linkedin.com/in/manish-parmar-8a30b33a6/" target="_blank" class="contact-link">
+            LinkedIn
+            <span>→</span>
+          </a>
+          <hr class="contact-hr" />
+          <a href="resume.pdf" target="_blank" class="contact-link">
+            Download Resume
+            <span>↓</span>
+          </a>
+          <hr class="contact-hr" />
+        </div>
+      </div>
+
+      <div class="contact-form-col">
+        <form class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="b2e918c5-3967-4895-af6d-dbe54405527e" />
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-input" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-input" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-input form-textarea" id="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span class="submit-text">Send Message</span>
+            <span class="submit-arrow">→</span>
+          </button>
+          <p class="form-success" id="formSuccess"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Manish Parmar<sup>®</sup></span>
+        <p>Intern Software Engineer &amp; AI Builder</p>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 Manish Parmar. All rights reserved.</p>
+        <p>Built with ♥ and a lot of LLMs</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Project Image Wrapper -->
+  <div class="hover-image-wrapper" id="hoverImageWrapper">
+    <div class="hover-image-inner">
+      <img src="" alt="Project Preview" id="hoverImage" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
