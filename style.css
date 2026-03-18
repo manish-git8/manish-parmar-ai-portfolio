@@ -419,7 +419,7 @@ body.cursor-hover-text .cursor-text {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.2;
 }
 
 /* Gradient Orbs (ambient glow blobs) */
@@ -433,29 +433,29 @@ body.cursor-hover-text .cursor-text {
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.25;
-  animation: orbFloat 10s ease-in-out infinite alternate;
+  filter: blur(100px);
+  opacity: 0.12;
+  animation: orbFloat 14s ease-in-out infinite alternate;
 }
 .orb-1 {
-  width: 420px; height: 420px;
+  width: 350px; height: 350px;
   background: radial-gradient(circle, #7c3aed, transparent 70%);
-  top: -100px; left: -80px;
-  animation-duration: 12s;
+  top: -80px; left: -60px;
+  animation-duration: 16s;
 }
 .orb-2 {
-  width: 340px; height: 340px;
+  width: 280px; height: 280px;
   background: radial-gradient(circle, #10b981, transparent 70%);
-  top: 40%; right: -60px;
-  animation-duration: 9s;
-  animation-delay: -3s;
+  top: 30%; right: -40px;
+  animation-duration: 12s;
+  animation-delay: -4s;
 }
 .orb-3 {
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, #ec4899, transparent 70%);
-  bottom: 0px; left: 40%;
-  animation-duration: 14s;
-  animation-delay: -6s;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, #6366f1, transparent 70%);
+  bottom: 10px; left: 45%;
+  animation-duration: 18s;
+  animation-delay: -8s;
 }
 @keyframes orbFloat {
   0%   { transform: translate(0, 0) scale(1); }
@@ -471,7 +471,7 @@ body.cursor-hover-text .cursor-text {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.07;
+  opacity: 0.04;
 }
 
 /* Ensure section content renders above canvases */

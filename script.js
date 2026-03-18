@@ -720,14 +720,13 @@
   initMatrixRain('matrixCanvas2');
 
   /* ================================================================
-     EFFECT 3: GLITCH TEXT on hero marquee
+     EFFECT 3: GLITCH TEXT on contact section heading
      ================================================================ */
   (function initGlitch() {
-    const marqueeSpans = document.querySelectorAll('.hero-marquee-track span');
-    marqueeSpans.forEach(span => {
-      span.classList.add('glitch');
-      span.setAttribute('data-text', span.textContent);
-    });
+    const glitchTarget = document.querySelector('.contact-giant');
+    if (!glitchTarget) return;
+    glitchTarget.classList.add('glitch');
+    glitchTarget.setAttribute('data-text', glitchTarget.textContent);
   })();
 
 })();
