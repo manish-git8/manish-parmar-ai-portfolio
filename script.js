@@ -575,4 +575,160 @@
   console.log('%c Manish Parmar — AI Portfolio 🚀', 
     'color: #7c3aed; font-size: 18px; font-weight: bold; padding: 8px 16px; background: #f5f3ff; border-radius: 4px;');
 
+  /* ================================================================
+     EFFECT 1: NEURAL NETWORK CANVAS (Hero background)
+     ================================================================ */
+  (function initNeuralNetwork() {
+    const canvas = document.getElementById('neuralCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    let nodes = [];
+    let mouse = { x: canvas.offsetWidth / 2, y: canvas.offsetHeight / 2 };
+    const NODE_COUNT = 55;
+    const MAX_DIST = 160;
+    const COLORS = ['#7c3aed', '#10b981', '#ec4899', '#3b82f6'];
+
+    function resize() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    for (let i = 0; i < NODE_COUNT; i++) {
+      nodes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
+        r: Math.random() * 2.5 + 1.5,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      });
+    }
+
+    document.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    function drawFrame() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i], b = nodes[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MAX_DIST) {
+            const alpha = 1 - dist / MAX_DIST;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(124,58,237,${alpha * 0.5})`;
+            ctx.lineWidth = 0.7;
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+        // Mouse connection
+        const mx = nodes[i].x - mouse.x, my = nodes[i].y - mouse.y;
+        const mdist = Math.sqrt(mx * mx + my * my);
+        if (mdist < MAX_DIST * 1.5) {
+          const alpha = 1 - mdist / (MAX_DIST * 1.5);
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(16,185,129,${alpha * 0.7})`;
+          ctx.lineWidth = 1;
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.stroke();
+        }
+      }
+
+      // Draw nodes
+      nodes.forEach((n) => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = n.color;
+        ctx.shadowColor = n.color;
+        ctx.shadowBlur = 8;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // Move
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+
+        // Slight mouse attraction
+        const dx = mouse.x - n.x, dy = mouse.y - n.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 200) {
+          n.vx += dx * 0.00015;
+          n.vy += dy * 0.00015;
+        }
+        // Cap speed
+        const speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+        if (speed > 1.5) { n.vx = (n.vx / speed) * 1.5; n.vy = (n.vy / speed) * 1.5; }
+      });
+
+      requestAnimationFrame(drawFrame);
+    }
+    drawFrame();
+  })();
+
+  /* ================================================================
+     EFFECT 2: MATRIX RAIN (About + Projects sections)
+     ================================================================ */
+  function initMatrixRain(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{};<>?,./あいうえおアイウエオ';
+    const fontSize = 13;
+    let cols, drops;
+
+    function resize() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      cols = Math.floor(canvas.width / fontSize);
+      drops = Array(cols).fill(1).map(() => Math.floor(Math.random() * -50));
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#00ff41';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < cols; i++) {
+        const char = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+      requestAnimationFrame(drawMatrix);
+    }
+    drawMatrix();
+  }
+
+  initMatrixRain('matrixCanvas');
+  initMatrixRain('matrixCanvas2');
+
+  /* ================================================================
+     EFFECT 3: GLITCH TEXT on hero marquee
+     ================================================================ */
+  (function initGlitch() {
+    const marqueeSpans = document.querySelectorAll('.hero-marquee-track span');
+    marqueeSpans.forEach(span => {
+      span.classList.add('glitch');
+      span.setAttribute('data-text', span.textContent);
+    });
+  })();
+
 })();
+
