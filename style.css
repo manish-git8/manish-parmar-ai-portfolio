@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    RESET & GLOBALS
    ============================================ */
 *,
@@ -662,7 +662,7 @@ body.cursor-hover-text .cursor-text {
 }
 
 .terminal-body::after {
-  content: '█';
+  content: 'â–ˆ';
   animation: blink 1s step-end infinite;
 }
 
@@ -1500,10 +1500,10 @@ body.dark-bg {
 }
 
 /* ============================================
-   RESPONSIVE — MULTI-BREAKPOINT
+   RESPONSIVE â€” MULTI-BREAKPOINT
    ============================================ */
 
-/* ── Mobile: up to 480px ── */
+/* â”€â”€ Mobile: up to 480px â”€â”€ */
 @media (max-width: 480px) {
   :root {
     --nav-h: 60px;
@@ -1720,7 +1720,7 @@ body.dark-bg {
   }
 }
 
-/* ── Small tablet: 481px to 768px ── */
+/* â”€â”€ Small tablet: 481px to 768px â”€â”€ */
 @media (min-width: 481px) and (max-width: 768px) {
   :root {
     --nav-h: 64px;
@@ -1887,7 +1887,7 @@ body.dark-bg {
   }
 }
 
-/* ── Tablet/large tablet: 769px to 1024px ── */
+/* â”€â”€ Tablet/large tablet: 769px to 1024px â”€â”€ */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav {
     padding: 0 28px;
@@ -1981,7 +1981,7 @@ body.dark-bg {
   }
 }
 
-/* ── Laptop: 1025px to 1279px ── */
+/* â”€â”€ Laptop: 1025px to 1279px â”€â”€ */
 @media (min-width: 1025px) and (max-width: 1279px) {
   .hero-marquee-track {
     font-size: clamp(100px, 14vw, 150px);
@@ -2006,7 +2006,7 @@ body.dark-bg {
   }
 }
 
-/* ── Desktop: 1280px+ ── */
+/* â”€â”€ Desktop: 1280px+ â”€â”€ */
 @media (min-width: 1280px) {
   .projects-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -2224,7 +2224,7 @@ body.dark-bg {
   margin-bottom: 12px;
   font-family: var(--font, sans-serif);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.85rem;
 }
 .skill-name { 
   color: var(--text-dark, #1f2937); 
