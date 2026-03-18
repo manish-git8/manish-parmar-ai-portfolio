@@ -78,16 +78,16 @@
   const magneticTargets = document.querySelectorAll('.nav-cta, .nav-menu-btn, .form-submit, .menu-item, .project-card, .menu-social');
   magneticTargets.forEach(el => {
     el.classList.add('magnetic');
-    
+
     el.addEventListener('mousemove', (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-      
+
       // Pull strength depends on element type
       const pull = el.classList.contains('project-card') ? 0.05 : 0.3;
       el.style.transform = `translate(${x * pull}px, ${y * pull}px)`;
-      
+
       // Pull the cursor slightly too to give a heavier "snap" feel
       cursor.style.transform = `translate(calc(-50% + ${x * (pull * 0.5)}px), calc(-50% + ${y * (pull * 0.5)}px))`;
     });
@@ -109,7 +109,7 @@
     menuOverlay.classList.add('open');
     menuBtn.textContent = 'Close';
     document.body.style.overflow = 'hidden';
-    
+
     // Stagger menu items
     const items = menuOverlay.querySelectorAll('.menu-item');
     items.forEach((item, i) => {
@@ -122,7 +122,7 @@
     menuOverlay.classList.remove('open');
     menuBtn.textContent = 'Menu';
     document.body.style.overflow = '';
-    
+
     const items = menuOverlay.querySelectorAll('.menu-item');
     items.forEach(item => { item.style.transitionDelay = '0s'; });
   }
@@ -286,16 +286,16 @@
   /* ---- SCROLL ZOOM IN ONLY (GPU-accelerated, lag-free) ---- */
   const zoomTitles = [
     { el: document.querySelector('.hero-marquee-track'), fromScale: 0.75 },
-    { el: document.querySelector('.skills-giant'),       fromScale: 0.60 },
-    { el: document.querySelector('.projects-giant'),     fromScale: 0.60 },
-    { el: document.querySelector('.contact-giant'),      fromScale: 0.60 },
-    { el: document.querySelector('.about-statement'),    fromScale: 0.82 },
+    { el: document.querySelector('.skills-giant'), fromScale: 0.60 },
+    { el: document.querySelector('.projects-giant'), fromScale: 0.60 },
+    { el: document.querySelector('.contact-giant'), fromScale: 0.60 },
+    { el: document.querySelector('.about-statement'), fromScale: 0.82 },
   ].filter(t => t.el !== null);
 
   // Pre-promote each element to its own GPU layer and cache last scale
   zoomTitles.forEach(t => {
     t.el.style.willChange = 'transform';
-    t.el.style.transform  = `scale(${t.fromScale}) translateZ(0)`;
+    t.el.style.transform = `scale(${t.fromScale}) translateZ(0)`;
     t.el.style.transformOrigin = 'center center';
     t._lastScale = t.fromScale;
   });
@@ -305,14 +305,14 @@
   function updateZoomTitles() {
     const vh = window.innerHeight;
     zoomTitles.forEach(t => {
-      const rect  = t.el.getBoundingClientRect();
-      const elH   = rect.height || 1;
+      const rect = t.el.getBoundingClientRect();
+      const elH = rect.height || 1;
       // progress 0→1 as element travels from entering bottom to fully in centre
-      const travel   = vh * 0.7 + elH * 0.5;          // trigger zone
+      const travel = vh * 0.7 + elH * 0.5;          // trigger zone
       const traveled = (vh - rect.top);
-      const raw      = Math.min(Math.max(traveled / travel, 0), 1);
-      const easedP   = easeOutCubic(raw);
-      const scale    = t.fromScale + (1 - t.fromScale) * easedP;
+      const raw = Math.min(Math.max(traveled / travel, 0), 1);
+      const easedP = easeOutCubic(raw);
+      const scale = t.fromScale + (1 - t.fromScale) * easedP;
 
       // Skip DOM write if change is imperceptible (< 0.5%)
       if (Math.abs(scale - t._lastScale) < 0.005) return;
@@ -347,8 +347,8 @@
     elements.forEach(el => {
       const text = el.innerHTML;
       const words = text.split(' ');
-      el.innerHTML = words.map((word, i) => 
-        `<span style="display:inline-block;opacity:0;transform:translateY(20px);transition:opacity 0.5s ${i*0.04}s,transform 0.5s ${i*0.04}s cubic-bezier(0.16,1,0.3,1)">${word}&nbsp;</span>`
+      el.innerHTML = words.map((word, i) =>
+        `<span style="display:inline-block;opacity:0;transform:translateY(20px);transition:opacity 0.5s ${i * 0.04}s,transform 0.5s ${i * 0.04}s cubic-bezier(0.16,1,0.3,1)">${word}&nbsp;</span>`
       ).join('');
     });
   }
@@ -455,20 +455,20 @@
       "",
       "agent.execute('Build scalable AI')"
     ];
-    
+
     let lineIdx = 0;
     let charIdx = 0;
-    
+
     function typeTerminal() {
       if (lineIdx >= codeLines.length) return;
-      
+
       const currentLine = codeLines[lineIdx];
       if (charIdx === 0) {
         termBody.appendChild(document.createElement('div'));
       }
-      
+
       const latestDiv = termBody.lastElementChild;
-      
+
       if (charIdx < currentLine.length) {
         latestDiv.textContent += currentLine[charIdx];
         charIdx++;
@@ -479,7 +479,7 @@
         setTimeout(typeTerminal, 400);
       }
     }
-    
+
     // Start terminal typing after a short delay
     setTimeout(typeTerminal, 1500);
   }
@@ -509,7 +509,7 @@
       let count = 0;
       const glitch = setInterval(() => {
         logo.style.letterSpacing = (Math.random() > 0.5 ? '-0.05em' : '-0.02em');
-        logo.style.transform = `translate(${(Math.random()-0.5)*3}px, ${(Math.random()-0.5)*3}px)`;
+        logo.style.transform = `translate(${(Math.random() - 0.5) * 3}px, ${(Math.random() - 0.5) * 3}px)`;
         count++;
         if (count > 8) {
           clearInterval(glitch);
@@ -572,161 +572,173 @@
     });
   });
 
-  console.log('%c Manish Parmar — AI Portfolio 🚀', 
+  console.log('%c Manish Parmar — AI Portfolio 🚀',
     'color: #7c3aed; font-size: 18px; font-weight: bold; padding: 8px 16px; background: #f5f3ff; border-radius: 4px;');
 
   /* ================================================================
-     EFFECT 1: NEURAL NETWORK CANVAS (Hero background)
+     ADVANCED AURORA NEBULA BACKGROUND ENGINE
+     Technique: multi-harmonic sinusoidal noise field → per-pixel RGBA
+     + luminous particle system + CSS mouse-flashlight dot grid
      ================================================================ */
-  (function initNeuralNetwork() {
-    const canvas = document.getElementById('neuralCanvas');
+  (function initAurora() {
+    const canvas = document.getElementById('auroraCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    const grid = document.getElementById('heroDotGrid');
 
-    let nodes = [];
-    let mouse = { x: canvas.offsetWidth / 2, y: canvas.offsetHeight / 2 };
-    const NODE_COUNT = 55;
-    const MAX_DIST = 160;
-    const COLORS = ['#7c3aed', '#10b981', '#ec4899', '#3b82f6'];
+    let W, H, imageData, data;
+    let t = 0;
+    let mx = 0.5, my = 0.5; // normalised mouse 0-1
 
+    // ── Resize ──────────────────────────────────────────────
     function resize() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+      imageData = ctx.createImageData(W, H);
+      data = imageData.data;
     }
     resize();
     window.addEventListener('resize', resize);
 
-    for (let i = 0; i < NODE_COUNT; i++) {
-      nodes.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
-        r: Math.random() * 2.5 + 1.5,
-        color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      });
-    }
-
-    document.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+    // ── Mouse → flashlight grid reveal + aurora warp ────────
+    const hero = canvas.closest('section');
+    hero && hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      mx = (e.clientX - rect.left) / rect.width;
+      my = (e.clientY - rect.top)  / rect.height;
+      if (grid) {
+        grid.style.setProperty('--mx', (mx * 100).toFixed(1) + '%');
+        grid.style.setProperty('--my', (my * 100).toFixed(1) + '%');
+      }
     });
 
-    function drawFrame() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // ── Aurora color palette (HSL control points) ───────────
+    // Each band: [hue, sat, lig, weight]
+    const bands = [
+      [265, 90, 55, 1.0],  // vivid purple
+      [200, 95, 50, 0.8],  // cyan-blue
+      [160, 88, 45, 0.6],  // emerald
+      [300, 80, 50, 0.5],  // magenta
+      [220, 95, 60, 0.7],  // blue
+    ];
 
-      // Draw connections
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const a = nodes[i], b = nodes[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < MAX_DIST) {
-            const alpha = 1 - dist / MAX_DIST;
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(124,58,237,${alpha * 0.5})`;
-            ctx.lineWidth = 0.7;
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
+    // ── Harmonic noise (no external library needed) ──────────
+    function noise(x, y, t) {
+      const n =
+        Math.sin(x * 2.1 + t * 0.6)     * 0.30 +
+        Math.sin(y * 1.8 - t * 0.4)     * 0.25 +
+        Math.sin((x + y) * 1.4 + t * 0.8) * 0.20 +
+        Math.sin(x * 0.9 - y * 1.3 + t) * 0.15 +
+        Math.sin((x * 0.5 + y * 0.7) * 2.2 - t * 0.5) * 0.10;
+      return n * 0.5 + 0.5; // 0..1
+    }
+
+    // ── Parse HSL → RGB ─────────────────────────────────────
+    function hslToRgb(h, s, l) {
+      s /= 100; l /= 100;
+      const k = n => (n + h / 30) % 12;
+      const a = s * Math.min(l, 1 - l);
+      const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+      return [f(0) * 255, f(8) * 255, f(4) * 255];
+    }
+
+    // ── Low-res pixel pass (done every frame on a step grid) ─
+    const STEP = 4; // sample every 4px for performance
+
+    function drawAurora() {
+      const tt = t * 0.35;
+      for (let py = 0; py < H; py += STEP) {
+        for (let px = 0; px < W; px += STEP) {
+          const nx = px / W;
+          const ny = py / H;
+
+          // Mouse-warp: pull field toward cursor slightly
+          const warpX = nx + (mx - 0.5) * 0.12;
+          const warpY = ny + (my - 0.5) * 0.10;
+
+          // Blend multiple aurora bands
+          let rSum = 0, gSum = 0, bSum = 0, wSum = 0;
+          bands.forEach(([h, s, l, w], i) => {
+            const n = noise(warpX * (1 + i * 0.3), warpY * (1.5 + i * 0.2), tt + i * 1.1);
+            const intensity = Math.pow(n, 1.8); // contrast boost
+            const [r, g, b] = hslToRgb((h + n * 40) % 360, s, l);
+            rSum += r * intensity * w;
+            gSum += g * intensity * w;
+            bSum += b * intensity * w;
+            wSum += intensity * w;
+          });
+
+          const inv = wSum > 0 ? 1 / wSum : 0;
+          const r = Math.min(rSum * inv * 0.72, 255);
+          const g = Math.min(gSum * inv * 0.72, 255);
+          const b = Math.min(bSum * inv * 0.72, 255);
+
+          // alpha: strongest at top-center, fades at edges/bottom
+          const edgeDist = 1 - Math.abs(nx - 0.5) * 1.6;
+          const alpha = Math.max(0, Math.min(edgeDist * (1 - ny * 0.55) * 200, 180));
+
+          // Fill the STEP×STEP block
+          for (let dy = 0; dy < STEP && py + dy < H; dy++) {
+            for (let dx = 0; dx < STEP && px + dx < W; dx++) {
+              const idx = ((py + dy) * W + (px + dx)) * 4;
+              data[idx]     = r;
+              data[idx + 1] = g;
+              data[idx + 2] = b;
+              data[idx + 3] = alpha;
+            }
           }
         }
-        // Mouse connection
-        const mx = nodes[i].x - mouse.x, my = nodes[i].y - mouse.y;
-        const mdist = Math.sqrt(mx * mx + my * my);
-        if (mdist < MAX_DIST * 1.5) {
-          const alpha = 1 - mdist / (MAX_DIST * 1.5);
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(16,185,129,${alpha * 0.7})`;
-          ctx.lineWidth = 1;
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.stroke();
-        }
       }
+      ctx.putImageData(imageData, 0, 0);
+    }
 
-      // Draw nodes
-      nodes.forEach((n) => {
+    // ── Luminous particle system ─────────────────────────────
+    const particles = Array.from({ length: 120 }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.8 + 0.4,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.18,
+      hue: Math.floor(Math.random() * 100) + 200, // blue-purple range
+      alpha: Math.random() * 0.6 + 0.2,
+      twinkle: Math.random() * Math.PI * 2,
+    }));
+
+    function drawParticles() {
+      particles.forEach(p => {
+        p.twinkle += 0.03;
+        const a = p.alpha * (0.7 + 0.3 * Math.sin(p.twinkle));
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = n.color;
-        ctx.shadowColor = n.color;
-        ctx.shadowBlur = 8;
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${p.hue}, 90%, 80%, ${a})`;
+        ctx.shadowColor = `hsl(${p.hue}, 90%, 60%)`;
+        ctx.shadowBlur = p.r * 6;
         ctx.fill();
         ctx.shadowBlur = 0;
 
-        // Move
-        n.x += n.vx;
-        n.y += n.vy;
-        if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
-        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
-
-        // Slight mouse attraction
-        const dx = mouse.x - n.x, dy = mouse.y - n.y;
-        const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 200) {
-          n.vx += dx * 0.00015;
-          n.vy += dy * 0.00015;
-        }
-        // Cap speed
-        const speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
-        if (speed > 1.5) { n.vx = (n.vx / speed) * 1.5; n.vy = (n.vy / speed) * 1.5; }
+        p.x += p.vx + (mx - 0.5) * 0.04;
+        p.y += p.vy + (my - 0.5) * 0.03;
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
       });
-
-      requestAnimationFrame(drawFrame);
     }
-    drawFrame();
-  })();
 
-  /* ================================================================
-     EFFECT 2: MATRIX RAIN (About + Projects sections)
-     ================================================================ */
-  function initMatrixRain(canvasId) {
-    const canvas = document.getElementById(canvasId);
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{};<>?,./あいうえおアイウエオ';
-    const fontSize = 13;
-    let cols, drops;
+    // ── Main loop ────────────────────────────────────────────
+    let frameCount = 0;
+    function loop() {
+      t += 0.008;
+      frameCount++;
 
-    function resize() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      cols = Math.floor(canvas.width / fontSize);
-      drops = Array(cols).fill(1).map(() => Math.floor(Math.random() * -50));
+      // Aurora re-render every 2 frames (heavy operation, still 30fps)
+      if (frameCount % 2 === 0) drawAurora();
+
+      // Particles every frame
+      drawParticles();
+      requestAnimationFrame(loop);
     }
-    resize();
-    window.addEventListener('resize', resize);
-
-    function drawMatrix() {
-      ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#00ff41';
-      ctx.font = fontSize + 'px monospace';
-
-      for (let i = 0; i < cols; i++) {
-        const char = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-      requestAnimationFrame(drawMatrix);
-    }
-    drawMatrix();
-  }
-
-  initMatrixRain('matrixCanvas');
-  initMatrixRain('matrixCanvas2');
-
-  /* ================================================================
-     EFFECT 3: GLITCH TEXT on contact section heading
-     ================================================================ */
-  (function initGlitch() {
-    const glitchTarget = document.querySelector('.contact-giant');
-    if (!glitchTarget) return;
-    glitchTarget.classList.add('glitch');
-    glitchTarget.setAttribute('data-text', glitchTarget.textContent);
+    loop();
   })();
 
 })();
