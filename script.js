@@ -575,4 +575,21 @@
   console.log('%c Manish Parmar — AI Portfolio 🚀',
     'color: #7c3aed; font-size: 18px; font-weight: bold; padding: 8px 16px; background: #f5f3ff; border-radius: 4px;');
 
+  /* ---- Expertise Progress Bars ---- */
+  const barsObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fills = entry.target.querySelectorAll('.skill-fill');
+        fills.forEach(fill => {
+          const pct = fill.getAttribute('data-percent');
+          fill.style.width = pct + '%';
+        });
+        barsObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const barsContainer = document.querySelector('.skill-bars-container');
+  if (barsContainer) barsObs.observe(barsContainer);
+
 })();

@@ -82,6 +82,9 @@
       <span class="label-status">(MP® — 01)</span>
     </div>
 
+    <!-- Aurora Glow Background -->
+    <div class="hero-aurora"></div>
+
     <!-- Giant scrolling name -->
     <div class="hero-giant-text">
       <div class="hero-marquee-track" id="heroMarquee">
@@ -193,17 +196,17 @@
     <hr class="section-hr" />
 
     <div class="about-grid">
-      <div class="about-col">
+      <div class="about-col glass-card">
         <h3 class="about-col-title">Fully Loaded</h3>
         <p class="about-col-body">From complex AI systems to production-grade APIs to semantic search engines — every
           project is now possible with the power of LLMs.</p>
       </div>
-      <div class="about-col">
+      <div class="about-col glass-card">
         <h3 class="about-col-title">Fast Delivery</h3>
         <p class="about-col-body">Rapid prototyping and shipping. I don't wait for perfect — I iterate fast and build
           systems that scale from day one.</p>
       </div>
-      <div class="about-col">
+      <div class="about-col glass-card">
         <h3 class="about-col-title">Open Source</h3>
         <p class="about-col-body">Everything built on proven open-source foundations. Transparency, reproducibility, and
           community-first engineering.</p>
@@ -233,106 +236,58 @@
 
     <div class="skills-giant reveal-text-dark">SKILLS</div>
 
-    <div class="projects-grid">
-
-      <div class="project-card" style="--gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)">
-        <div class="project-card-inner">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop"
-              alt="AI & ML" />
-          </div>
-          <div class="project-meta">
-            <div class="project-number">01</div>
-            <div class="project-tags">
-              <span>OpenAI</span><span>LangChain</span><span>HuggingFace</span>
-            </div>
-          </div>
-          <h3 class="project-title">AI &amp; ML</h3>
-          <p class="project-desc">Specialized in Large Language Models, prompt engineering, and building robust AI
-            pipelines with modern frameworks.</p>
-          <div class="project-arrow">→</div>
+    <div class="skills-scrolling-row" style="padding: 20px; margin: 0 auto; max-width: 1280px; display: flex; flex-wrap: nowrap; gap: 20px; justify-content: center; overflow-x: auto;">
+      
+      <!-- Card 1 -->
+      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="AI & ML" />
+          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">01</div>
         </div>
-        <div class="project-hover-bg" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)"></div>
+        <div style="padding: 20px;">
+          <div style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">OpenAI & LangChain</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI & Machine Learning</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Specialized in Large Language Models, prompt engineering, and building robust AI pipelines natively.</p>
+        </div>
       </div>
 
-      <div class="project-card" style="--gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%)">
-        <div class="project-card-inner">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop"
-              alt="Foundations" />
-          </div>
-          <div class="project-meta">
-            <div class="project-number">02</div>
-            <div class="project-tags">
-              <span>Python</span><span>FastAPI</span>
-            </div>
-          </div>
-          <h3 class="project-title">Foundations</h3>
-          <p class="project-desc">Strong backend engineering principles, crafting high-performance APIs and scalable
-            architectures.</p>
-          <div class="project-arrow">→</div>
+      <!-- Card 2 -->
+      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Foundations" />
+          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">02</div>
         </div>
-        <div class="project-hover-bg" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%)"></div>
+        <div style="padding: 20px;">
+          <div style="color: #10b981; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Python & FastAPI</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Backend Foundations</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Strong backend principles, crafting high-performance APIs and scalable architectures.</p>
+        </div>
       </div>
 
-      <div class="project-card" style="--gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)">
-        <div class="project-card-inner">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop"
-              alt="Vector DBs" />
-          </div>
-          <div class="project-meta">
-            <div class="project-number">03</div>
-            <div class="project-tags">
-              <span>FAISS</span><span>Vector DB</span>
-            </div>
-          </div>
-          <h3 class="project-title">Vector DBs</h3>
-          <p class="project-desc">Expertise in high-dimensional data storage and semantic search using vector databases
-            for rapid information retrieval.</p>
-          <div class="project-arrow">→</div>
+      <!-- Card 3 -->
+      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Vector DBs" />
+          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">03</div>
         </div>
-        <div class="project-hover-bg" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"></div>
+        <div style="padding: 20px;">
+          <div style="color: #f59e0b; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">FAISS & Pinecone</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Vector Databases</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Expertise in high-dimensional data storage, semantic search indexing, and deep retrieval algorithms.</p>
+        </div>
       </div>
 
-      <div class="project-card" style="--gradient: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)">
-        <div class="project-card-inner">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop"
-              alt="AI Engineering" />
-          </div>
-          <div class="project-meta">
-            <div class="project-number">04</div>
-            <div class="project-tags">
-              <span>RAG</span><span>Agents</span>
-            </div>
-          </div>
-          <h3 class="project-title">AI Engineering</h3>
-          <p class="project-desc">Building advanced Retrieval-Augmented Generation workflows and autonomous multi-agent
-            systems.</p>
-          <div class="project-arrow">→</div>
+      <!-- Card 4 -->
+      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Agents" />
+          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">04</div>
         </div>
-        <div class="project-hover-bg" style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"></div>
-      </div>
-
-      <div class="project-card" style="--gradient: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)">
-        <div class="project-card-inner">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop"
-              alt="DevOps" />
-          </div>
-          <div class="project-meta">
-            <div class="project-number">05</div>
-            <div class="project-tags">
-              <span>Docker</span><span>Git</span>
-            </div>
-          </div>
-          <h3 class="project-title">DevOps</h3>
-          <p class="project-desc">Containerizing applications and implementing CI/CD pipelines to ensure seamless global
-            deployments.</p>
-          <div class="project-arrow">→</div>
+        <div style="padding: 20px;">
+          <div style="color: #ec4899; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Agents & RAG</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI Engineering</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Building advanced conversational workflows, RAG pipelines, and autonomous multi-agent networks.</p>
         </div>
-        <div class="project-hover-bg" style="background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"></div>
       </div>
 
     </div>
@@ -442,6 +397,88 @@
     </div>
   </section>
 
+  <hr class="section-hr" style="margin: 0;" />
+
+  <!-- ============ PROFICIENCY SECTION ============ -->
+  <section class="proficiency-section" id="proficiency" style="padding: 60px 20px; background: var(--beige); color: var(--text-dark);">
+    <div class="section-label">
+      <span class="dot"></span>
+      <span class="label-text">PROFICIENCY</span>
+      <span class="label-status">(MP® — 05)</span>
+    </div>
+
+    <div class="projects-giant reveal-text-dark" style="color: rgba(0,0,0,0.06); margin-bottom: 30px; font-size: clamp(40px, 12vw, 80px);">EXPERTISE</div>
+    
+    <div class="skill-bars-container" id="expertiseProgressContainer" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto; width: 100%;">
+      
+      <!-- Skill 1 -->
+      <div class="skill-bar-wrap">
+        <div class="skill-info">
+          <span class="skill-name">Python Frameworks (FastAPI, Flask)</span>
+          <span class="skill-pct-text">95%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-fill" data-percent="95" style="background: linear-gradient(90deg, #7c3aed, #ec4899);"></div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-bar-wrap">
+        <div class="skill-info">
+          <span class="skill-name">LLMs (OpenAI, Anthropic)</span>
+          <span class="skill-pct-text">92%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-fill" data-percent="92" style="background: linear-gradient(90deg, #10b981, #34d399);"></div>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-bar-wrap">
+        <div class="skill-info">
+          <span class="skill-name">LangChain & LangGraph Orchestration</span>
+          <span class="skill-pct-text">88%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-fill" data-percent="88" style="background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
+        </div>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill-bar-wrap">
+        <div class="skill-info">
+          <span class="skill-name">Retrieval-Augmented Gen (RAG) & VectorDBs</span>
+          <span class="skill-pct-text">90%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-fill" data-percent="90" style="background: linear-gradient(90deg, #3b82f6, #60a5fa);"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Inline Script to guarantee intersection trigger purely for the Expertise bars -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById('expertiseProgressContainer');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const fills = entry.target.querySelectorAll('.skill-fill');
+            fills.forEach(fill => {
+              const pct = fill.getAttribute('data-percent');
+              // Short timeout guarantees CSS transition applies after display layout
+              setTimeout(() => { fill.style.width = pct + '%'; }, 100);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      if (container) observer.observe(container);
+    });
+  </script>
+
   <!-- ============ SECOND MARQUEE ============ -->
   <div class="marquee-strip dark">
     <div class="marquee-track reverse" id="marqueeTrack2">
@@ -453,16 +490,16 @@
   </div>
 
   <!-- ============ CONTACT SECTION (dark) ============ -->
-  <section class="contact" id="contact">
+  <section class="contact" id="contact" style="padding: 60px 20px;">
     <div class="section-label light">
       <span class="dot"></span>
       <span class="label-text">GET IN TOUCH</span>
-      <span class="label-status">(MP® — 05)</span>
+      <span class="label-status">(MP® — 06)</span>
     </div>
 
-    <div class="contact-giant reveal-text-dark">LET'S<br />TALK.</div>
+    <div class="contact-giant reveal-text-dark" style="margin-bottom: 30px; font-size: clamp(40px, 12vw, 80px); line-height: 1;">LET'S<br />TALK.</div>
 
-    <hr class="section-hr light" />
+    <hr class="section-hr light" style="margin: 30px 0;" />
 
     <div class="contact-layout">
       <div class="contact-info-col">

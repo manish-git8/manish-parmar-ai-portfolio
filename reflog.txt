@@ -1,0 +1,11 @@
+﻿d44c768 HEAD@{0}: reset: moving to origin/main
+d44c768 HEAD@{1}: commit: Darken silver background to #e8e8ed
+2a4053b HEAD@{2}: commit: Silver background for light sections + clean up dead aurora JS
+1cfe2c9 HEAD@{3}: commit: Add advanced Aurora Nebula hero: dark bg + pixel noise field + particles + dot grid
+442b2e3 HEAD@{4}: commit: Fix AI effects: dial back orbs/neural/matrix opacity, fix glitch placement
+86d7736 HEAD@{5}: commit: Add advanced AI effects: neural network, matrix rain, gradient orbs, glitch text
+4380d87 HEAD@{6}: commit: Reduce oversized text in hero, about, and contact sections
+7714c31 HEAD@{7}: commit: Remove 'Intern' title from all sections
+5e34813 HEAD@{8}: commit: Add full responsive CSS for mobile, tablet, laptop, and desktop
+9f475ed HEAD@{9}: Branch: renamed refs/heads/master to refs/heads/main
+9f475ed HEAD@{11}: commit (initial): Update layout and theme colors
