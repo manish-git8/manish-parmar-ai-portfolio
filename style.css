@@ -2277,3 +2277,118 @@ body.dark-bg {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   AI DRAWER
+   ============================================ */
+.ai-drawer-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: var(--dark);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 900;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.ai-drawer-btn:hover {
+  transform: translateY(-4px);
+  background: var(--accent-purple);
+  box-shadow: 0 14px 40px rgba(124, 58, 237, 0.4);
+}
+
+.ai-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.85); /* Deep blues */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform 0.6s var(--ease-out-expo);
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-drawer.open {
+  transform: translateX(0);
+}
+
+.ai-drawer-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 10;
+}
+
+.ai-drawer-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.ai-drawer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.ai-drawer-header {
+  padding: 40px 40px 20px;
+  color: white;
+}
+
+.ai-drawer-header h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #ffffff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ai-drawer-header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ai-canvas-container {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.ai-canvas-container:active {
+  cursor: grabbing;
+}

@@ -600,6 +600,27 @@
     </div>
   </div>
 
+  <!-- Floating AI Drawer Button -->
+  <button class="ai-drawer-btn" id="aiDrawerBtn" aria-label="Toggle AI Core">
+    <span class="btn-icon">✨</span>
+    <span class="btn-text">AI Core</span>
+  </button>
+
+  <!-- AI Drawer -->
+  <div class="ai-drawer" id="aiDrawer">
+    <button class="ai-drawer-close" id="aiDrawerClose" aria-label="Close AI Core">×</button>
+    <div class="ai-drawer-content">
+      <div class="ai-drawer-header">
+        <h3>Intelligence Core</h3>
+        <p>Interactive 3D Matrix</p>
+      </div>
+      <div id="ai-canvas-container" class="ai-canvas-container"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="ai-core.js"></script>
   <script src="script.js"></script>
 </body>
 

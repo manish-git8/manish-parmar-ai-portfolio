@@ -591,5 +591,26 @@
 
   const barsContainer = document.querySelector('.skill-bars-container');
   if (barsContainer) barsObs.observe(barsContainer);
+  /* ---- AI Drawer Toggle ---- */
+  const aiDrawerBtn = document.getElementById('aiDrawerBtn');
+  const aiDrawer = document.getElementById('aiDrawer');
+  const aiDrawerClose = document.getElementById('aiDrawerClose');
+
+  if (aiDrawerBtn && aiDrawer && aiDrawerClose) {
+    aiDrawerBtn.addEventListener('click', () => {
+      aiDrawer.classList.add('open');
+      document.body.classList.add('drawer-open');
+      setTimeout(() => {
+        if (typeof window.resizeAICore === 'function') {
+          window.resizeAICore();
+        }
+      }, 600); // Wait for transition
+    });
+
+    aiDrawerClose.addEventListener('click', () => {
+      aiDrawer.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    });
+  }
 
 })();
