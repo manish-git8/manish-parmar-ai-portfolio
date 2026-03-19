@@ -2317,6 +2317,52 @@ body.dark-bg {
   }
 }
 
+/* ============ RESPONSIVE LAYOUT HELPERS ============ */
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-lottie-wrap {
+  width: 380px;
+  height: 380px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .section-header-row > div:first-child {
+    width: 100%;
+    margin-bottom: 10px !important;
+  }
+
+  .section-lottie-wrap {
+    width: 280px;
+    height: 280px;
+    align-self: center;
+    margin-right: 0 !important;
+  }
+  
+  .hero-spline {
+    position: relative !important;
+    width: 100% !important;
+    height: 320px !important;
+    right: auto !important;
+    margin-top: 0px;
+  }
+}
+
 /* ============ FLOATING BACK TO TOP BUTTON ============ */
 #scrollTopBtn {
   position: fixed;
