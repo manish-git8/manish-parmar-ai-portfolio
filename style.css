@@ -2316,3 +2316,36 @@ body.dark-bg {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============ FLOATING BACK TO TOP BUTTON ============ */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  z-index: 999;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 54px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.3s ease;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 14px 40px rgba(124, 58, 237, 0.7);
+}

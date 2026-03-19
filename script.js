@@ -592,4 +592,19 @@
   const barsContainer = document.querySelector('.skill-bars-container');
   if (barsContainer) barsObs.observe(barsContainer);
 
+  // Floating Back to Top Button Visibility
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Optional: Smooth scroll handled by CSS scroll-behavior: smooth on html, 
+    // but we can ensure default action just works since it's an anchor.
+  }
+
 })();
