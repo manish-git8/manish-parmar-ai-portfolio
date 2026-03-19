@@ -2326,13 +2326,13 @@ body.dark-bg {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-green));
   color: #fff;
   font-size: 1.6rem;
   line-height: 54px;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 8px 28px rgba(16, 185, 129, 0.4);
   opacity: 0;
   pointer-events: none;
   transform: translateY(20px);
@@ -2347,5 +2347,5 @@ body.dark-bg {
 
 #scrollTopBtn:hover {
   transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 14px 40px rgba(124, 58, 237, 0.7);
+  box-shadow: 0 14px 40px rgba(16, 185, 129, 0.6);
 }
