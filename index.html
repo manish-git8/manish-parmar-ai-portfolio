@@ -112,7 +112,7 @@
         <span>Available for new opportunities</span>
       </div>
 
-      <!-- Floating AI Terminal moved inside flow -->
+      <!-- Restored Terminal -->
       <div class="hero-terminal" id="heroTerminal">
         <div class="terminal-header">
           <div class="term-dot close"></div>
@@ -122,7 +122,13 @@
         </div>
         <div class="terminal-body" id="termBody"></div>
       </div>
+
     </div> <!-- end hero-content -->
+
+    <!-- Hero: Developer desk animation -->
+    <div class="hero-spline" id="heroSpline">
+      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 460px; margin: 0 auto;" loop autoplay></lottie-player>
+    </div>
 
     <!-- Chat bubbles -->
     <div class="hero-profile-card" id="heroProfileCard">
@@ -175,7 +181,13 @@
       <span class="label-status">(MP® — 02)</span>
     </div>
 
-    <div class="projects-giant reveal-text" style="margin-bottom: 20px;">ABOUT ME</div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; position: relative; z-index: 2;">
+      <div class="projects-giant reveal-text" style="margin-bottom: 0;">ABOUT ME</div>
+      <!-- About: Astronaut — exploring AI frontiers -->
+      <div style="width: 380px; height: 380px; flex-shrink: 0;">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_eroqfvsf.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+      </div>
+    </div>
 
     <div class="about-hero-row">
       <div class="about-photo-col">
@@ -197,43 +209,68 @@
 
     <hr class="section-hr" />
 
-    <div class="about-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
+    <div class="about-grid"
+      style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
       <!-- Card 1 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 160px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Fully Loaded" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">01</div>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Fully Loaded" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            01</div>
         </div>
         <div style="padding: 25px;">
-          <div style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Architecture</div>
-          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Fully Loaded</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">From complex AI systems to production-grade APIs to semantic search engines — every project is now possible with the power of LLMs.</p>
+          <div
+            style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            Architecture</div>
+          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Fully
+            Loaded</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">From complex AI systems to
+            production-grade APIs to semantic search engines — every project is now possible with the power of LLMs.</p>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 160px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Fast Delivery" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">02</div>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Fast Delivery" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            02</div>
         </div>
         <div style="padding: 25px;">
-          <div style="color: #10b981; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Velocity</div>
-          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Fast Delivery</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">Rapid prototyping and shipping. I don't wait for perfect — I iterate fast and build systems that scale from day one.</p>
+          <div
+            style="color: #10b981; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            Velocity</div>
+          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Fast
+            Delivery</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">Rapid prototyping and
+            shipping. I don't wait for perfect — I iterate fast and build systems that scale from day one.</p>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 250px; max-width: 340px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 160px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Open Source" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">03</div>
+          <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Open Source" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            03</div>
         </div>
         <div style="padding: 25px;">
-          <div style="color: #f59e0b; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Community</div>
-          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Open Source</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">Everything built on proven open-source foundations. Transparency, reproducibility, and community-first engineering.</p>
+          <div
+            style="color: #f59e0b; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            Community</div>
+          <h3 style="font-size: 1.4rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Open
+            Source</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.95rem; line-height: 1.5;">Everything built on proven
+            open-source foundations. Transparency, reproducibility, and community-first engineering.</p>
         </div>
       </div>
     </div>
@@ -259,59 +296,98 @@
       <span class="label-status">(MP® — 03)</span>
     </div>
 
-    <div class="skills-giant reveal-text-dark">SKILLS</div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; position: relative; z-index: 2;">
+      <div class="skills-giant reveal-text-dark" style="margin-bottom: 0;">SKILLS</div>
+      <!-- Skills: Coding/Programming animation -->
+      <div style="width: 360px; height: 360px; flex-shrink: 0;">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_z01bika0.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+      </div>
+    </div>
 
-    <div class="skills-scrolling-row" style="padding: 20px; margin: 0 auto; max-width: 1280px; display: flex; flex-wrap: nowrap; gap: 20px; justify-content: center; overflow-x: auto;">
-      
+    <div class="skills-scrolling-row"
+      style="padding: 20px; margin: 0 auto; max-width: 1280px; display: flex; flex-wrap: nowrap; gap: 20px; justify-content: center; overflow-x: auto;">
+
       <!-- Card 1 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="AI & ML" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">01</div>
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="AI & ML" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            01</div>
         </div>
         <div style="padding: 20px;">
-          <div style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">OpenAI & LangChain</div>
-          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI & Machine Learning</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Specialized in Large Language Models, prompt engineering, and building robust AI pipelines natively.</p>
+          <div
+            style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            OpenAI & LangChain</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI &
+            Machine Learning</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Specialized in Large Language
+            Models, prompt engineering, and building robust AI pipelines natively.</p>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Foundations" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">02</div>
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Foundations" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            02</div>
         </div>
         <div style="padding: 20px;">
-          <div style="color: #10b981; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Python & FastAPI</div>
-          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Backend Foundations</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Strong backend principles, crafting high-performance APIs and scalable architectures.</p>
+          <div
+            style="color: #10b981; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            Python & FastAPI</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Backend
+            Foundations</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Strong backend principles,
+            crafting high-performance APIs and scalable architectures.</p>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Vector DBs" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">03</div>
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Vector DBs" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            03</div>
         </div>
         <div style="padding: 20px;">
-          <div style="color: #f59e0b; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">FAISS & Pinecone</div>
-          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Vector Databases</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Expertise in high-dimensional data storage, semantic search indexing, and deep retrieval algorithms.</p>
+          <div
+            style="color: #f59e0b; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            FAISS & Pinecone</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">Vector
+            Databases</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Expertise in high-dimensional
+            data storage, semantic search indexing, and deep retrieval algorithms.</p>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div class="custom-img-card" style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div class="custom-img-card"
+        style="flex: 1; min-width: 220px; max-width: 280px; background: var(--beige, #f9f9faf0); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <div style="width: 100%; height: 140px; overflow: hidden; position: relative;">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="Agents" />
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">04</div>
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop"
+            style="width: 100%; height: 100%; object-fit: cover;" alt="Agents" />
+          <div
+            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: var(--text-dark, #111);">
+            04</div>
         </div>
         <div style="padding: 20px;">
-          <div style="color: #ec4899; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">Agents & RAG</div>
-          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI Engineering</h3>
-          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Building advanced conversational workflows, RAG pipelines, and autonomous multi-agent networks.</p>
+          <div
+            style="color: #ec4899; font-weight: 700; font-size: 0.75rem; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            Agents & RAG</div>
+          <h3 style="font-size: 1.25rem; color: var(--text-dark, #111); margin-bottom: 8px; font-weight: 800;">AI
+            Engineering</h3>
+          <p style="color: var(--text-muted, #555); font-size: 0.9rem; line-height: 1.5;">Building advanced
+            conversational workflows, RAG pipelines, and autonomous multi-agent networks.</p>
         </div>
       </div>
 
@@ -327,7 +403,13 @@
       <a href="https://github.com/manish-git8" target="_blank" class="section-link">See all work →</a>
     </div>
 
-    <div class="projects-giant reveal-text">PROJECTS</div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; position: relative; z-index: 2;">
+      <div class="projects-giant reveal-text" style="margin-bottom: 0;">PROJECTS</div>
+      <!-- Projects: AI code / dev work animation -->
+      <div style="width: 300px; height: 300px; flex-shrink: 0;">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_gjmecwii.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+      </div>
+    </div>
 
     <div class="projects-grid">
 
@@ -425,17 +507,26 @@
   <hr class="section-hr" style="margin: 0;" />
 
   <!-- ============ PROFICIENCY SECTION ============ -->
-  <section class="proficiency-section" id="proficiency" style="padding: 60px 20px; background: var(--beige); color: var(--text-dark);">
+  <section class="proficiency-section" id="proficiency"
+    style="padding: 60px 20px; background: var(--beige); color: var(--text-dark);">
     <div class="section-label">
       <span class="dot"></span>
       <span class="label-text">PROFICIENCY</span>
       <span class="label-status">(MP® — 05)</span>
     </div>
 
-    <div class="projects-giant reveal-text-dark" style="color: rgba(0,0,0,0.06); margin-bottom: 30px; font-size: clamp(40px, 12vw, 80px);">EXPERTISE</div>
-    
-    <div class="skill-bars-container" id="expertiseProgressContainer" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0; width: 100%;">
-      
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
+      <div class="projects-giant reveal-text-dark"
+        style="color: rgba(0,0,0,0.06); margin-bottom: 0; font-size: clamp(40px, 12vw, 80px);">EXPERTISE</div>
+      <!-- Proficiency: Neural brain / deep expertise -->
+      <div style="width: 300px; height: 300px; flex-shrink: 0;">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_aw3OILD4Wa.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+      </div>
+    </div>
+
+    <div class="skill-bars-container" id="expertiseProgressContainer"
+      style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0; width: 100%;">
+
       <!-- Skill 1 -->
       <div class="skill-bar-wrap">
         <div class="skill-info">
@@ -522,7 +613,13 @@
       <span class="label-status">(MP® — 06)</span>
     </div>
 
-    <div class="contact-giant reveal-text-dark" style="margin-bottom: 30px; font-size: clamp(40px, 12vw, 80px); line-height: 1;">LET'S<br />TALK.</div>
+    <div style="display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2;">
+      <div class="contact-giant reveal-text-dark" style="margin-bottom: 0; font-size: clamp(40px, 12vw, 80px); line-height: 1;">LET'S<br />TALK.</div>
+      <!-- Contact: Paper plane / message animation -->
+      <div style="width: 320px; height: 320px; flex-shrink: 0; margin-right: 5%;">
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ebqz3ltq.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+      </div>
+    </div>
 
     <hr class="section-hr light" style="margin: 30px 0;" />
 
@@ -600,27 +697,7 @@
     </div>
   </div>
 
-  <!-- Floating AI Drawer Button -->
-  <button class="ai-drawer-btn" id="aiDrawerBtn" aria-label="Toggle AI Core">
-    <span class="btn-icon">✨</span>
-    <span class="btn-text">AI Core</span>
-  </button>
-
-  <!-- AI Drawer -->
-  <div class="ai-drawer" id="aiDrawer">
-    <button class="ai-drawer-close" id="aiDrawerClose" aria-label="Close AI Core">×</button>
-    <div class="ai-drawer-content">
-      <div class="ai-drawer-header">
-        <h3>Intelligence Core</h3>
-        <p>Interactive 3D Matrix</p>
-      </div>
-      <div id="ai-canvas-container" class="ai-canvas-container"></div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="ai-core.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="script.js"></script>
 </body>
 
